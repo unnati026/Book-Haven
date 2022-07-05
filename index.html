@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Haven Bookstore</title>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fleur De Leah|Sofia|Galada|Gwendolyn|Aclonica|Aladin">
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+    html { 
+        scroll-behavior: smooth; 
+    }
+    
+    body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: url("Images/bg.jpg");
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        font-family: 'Aclonica', sans-serif;
+        justify-content: space-around;
+        overflow: hidden;
+        background-image: url("Images/R2.jpg");
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 8vh;
+      }
+      .navbar a {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      .navbar a:hover {
+        color: #1f00cc;
+      }
+
+    .flex-container {
+        display: flex;
+        background-image: url("https://th.bing.com/th/id/R.4c83c11fcda67ffa487f88ae4b807c66?rik=3lZoiSsYVe7%2bVw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fxsBpjBU.jpg&ehk=pbgcO5YGyu3GUx1HVtWHQNyFR5fq9O%2bjU6GryFMM7VE%3d&risl=&pid=ImgRaw&r=0");
+        height: 50vw;
+        width: 100%;
+        padding: 8vh, 0, 0, 0;
+        color: white;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+     
+    .flex-container div {
+        height: 80%;
+        width: 50%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #intro {
+        justify-content: center;
+        align-items: center;
+        font-family: 'Gwendolyn';
+        color: rgb(0, 0, 0);
+        font-size: 20vh;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.815);
+        font-weight: bold;
+    }
+    #introtext {
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        font-family: 'Gwendolyn';
+        color: white;
+        font-size: 7vh;
+        width:100%;
+        font-weight: bold;
+    }
+    
+    .filler {
+        height:8vw;
+    }
+
+    .cards {
+        display:flex;  
+        justify-content: space-around;  
+        align-items:center;  
+        height:100vh;  
+        width:100vw;  
+        flex-wrap:wrap; 
+        height:700px;
+        background-color: black;
+    }
+
+    .title2 {
+        width: 100%;
+        font-size: x-large;
+        color:rgb(4, 205, 255);
+        margin: auto;
+        font-family: "sofia", "arial", sans-serif;
+        background-color: rgb(0, 0, 0);
+        align-items: center;
+    }
+
+    .animated {
+        width: 100%;
+    }
+
+    .cardContainer {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        width: 100%;
+        height: 40vw;
+        justify-content: space-around;
+        align-items:center;
+    }
+
+    .cardContainer2 {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        width: 100%;
+        height: 80vw;
+        justify-content: space-around;
+        align-items:center;
+    }
+
+    .card {
+        background-image: url("Images/R1.jpg");
+        display: flex;
+        flex-direction: column;
+        color: black;
+        justify-items: stretch;
+        align-items: center;
+        float: left;
+        width: 20%;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        height: 80%;
+        font-family: 'Lucida Console', 'Courier New', 'Monaco', monospace;
+        background-size: cover;
+   }
+   .card p {
+      font-size: 16px;
+   }
+   .cardContainer:after {
+        content: "";
+        display: table;
+        clear: both;
+   }
+   @media screen and (max-width: 600px) {
+      .card {
+         width: 100%;
+         background-image: url("Images/R.jpg");
+      }
+   }
+
+   .card2 {
+      background-image: url("Images/R.jpg");
+      display: flex;
+      flex-direction: column;
+      color: black;
+      justify-items: stretch;
+      align-items: center;
+      float: left;
+      width: 20%;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 10px;
+      height: 40%;
+      font-family: 'Lucida Console', 'Courier New', 'Monaco', monospace;
+      background-size: cover;
+   }
+   .card2 p {
+      font-size: 18px;
+   }
+   @media screen and (max-width: 600px) {
+      .card2 {
+         width: 100%;
+      }
+   }
+
+   #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: stretch;
+        width:100%;
+        height: 80%;
+        font-family: 'Lucida Console', 'Courier New', 'Monaco', monospace;
+        color:black;
+   }
+
+   #form input {
+        display:block;
+        padding: 10px;
+        margin:5px;
+        border:2px solid black;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.22);
+   }
+
+   .submit {
+        width: 30%;
+        height: 4vh;
+        border: 2px solid #000000
+   }
+   .submit:hover {
+        background-color: rgb(128, 214, 248);
+        color: rgb(0, 17, 255);
+   }
+
+   #formtext {
+        color: black;
+        font-weight: bold;
+        font-size: large;
+   }
+
+   .add:focus {
+        background-color: #61d62b;
+   }
+
+   .add {
+        width: 8vw;
+        height: 3vh;
+        border: 2px solid #000000;
+        font-size: large;
+   }
+
+   .add:hover {
+        background-color: #61d62b;
+   }
+
+   .add:after {
+        content: 'Add +';
+        display: block;
+    }
+    .add:focus:after, .add:active:after {
+        content: 'Added';
+        display: block;
+    }
+
+    .tag {
+        width: 100%;
+       text-align: right;
+       font-size: small;
+       color: maroon;
+    }
+
+    .footer {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+        justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        background-color: #000000;
+    }
+
+    .footer a:link {
+        color:aliceblue;
+        text-decoration: none;
+        font-family: 'Aladin';
+        font-size: larger;
+    }
+
+    .footer a:visited {
+        color: aliceblue;
+        text-decoration: none;
+        font-family: 'Aladin';
+        font-size: larger;
+    }
+
+    .footer a:hover {
+        color:rgb(157, 236, 203);
+        letter-spacing: 0.6vh;
+        text-decoration: underline;
+    }
+
+</style>
+
+<link rel = "icon" href = "Images\logo.ico" type = "image/x-icon">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="Images\logo.png" height="100%" />
+        <a href="#int">Introduction</a>
+        <a href="#best">Our Bestsellers</a>
+        <a href="#rec">Our Recommendations</a>
+        <a href="#rev">Reviews</a>
+        <a href="#foot">Links</a>
+    </div>
+    <div class="filler" id="int"></div>
+    <div class="flex-container">
+        <div>
+            <center><p id="intro">Book Haven</p></center>
+            <center><p id="introtext">Several stories under one roof</p></center>
+        </div>
+        <div class="logo"><img src="Images/cat.jpg" width="800vw" /></div>
+    </div>
+    <div class="filler"></div>
+    <div class="animated">
+        <img src="https://static.wixstatic.com/media/c4f01e_399a070b19744d60995ed7d2d3d8345a~mv2.gif" style="width: 100%;" />
+    </div>
+    <div class="filler" id="best"></div>
+    <div class="title2">
+        <h1>Our Bestsellers:</h1>
+        <p>Discover the most popular books in our store:</p>
+    </div>
+    <div class="cardContainer">
+        <div class="card">
+        <h2>The Psychology of Money</h2>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41r6F2LRf8L._SX323_BO1,204,203,200_.jpg" width="56%" />
+        <p>Bestseller by Morgan Housel<br />In The Psychology of Money, award-winning author Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life’s most important topics.</p>
+        <button type="button" class="add"></button>
+        <p class="tag">Non-Fiction</p>
+        </div>
+        <div class="card">
+        <h2>The Lion, the Witch and the Wardrobe</h2>
+        <img src="https://rukminim1.flixcart.com/image/416/416/book/6/6/7/the-chronicles-of-narnia-the-loin-the-witch-and-the-wardrobe-original-imadf2nsbtg2hfgh.jpeg?q=70" width="60%" />
+        <p>Book by C. S. Lewis<br /> Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.</p>
+        <button type="button" class="add"></button>
+        <p class="tag">Fiction</p>
+        </div>
+        <div class="card">
+        <h2>The Da Vinci Code</h2>
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41yT41SG23L._SX294_BO1,204,203,200_.jpg" width="51%" />
+        <p>The Da Vinci Code is a 2003 mystery thriller novel by Dan Brown. It is Brown's second novel to include the character Robert Langdon: the first was his 2000 novel Angels & Demons. The Da Vinci Code follows "symbologist" Robert Langdon and cryptologist Sophie Neveu.</p>
+        <button type="button" class="add"></button>
+        <p class="tag">Fiction</p>
+        </div>
+        <div class="card">
+        <h2>Entrepreneurship | 11th Edition</h2>
+        <img src="https://rukminim1.flixcart.com/image/416/416/kbs9k7k0/book/3/0/9/entrepreneurship-11th-edition-original-imaft236gwcvxzuf.jpeg?q=70" width="60%" />
+        <p>By Michael P. Peters, Robert D. Hisrich, Sabyasachi Sinha, Dean A. Shepherd.<br />Entrepreneurship, 11th edition, is a textbook that encourages students and readers to follow a logical manner on the process of formulating, planning, and implementing a new venture.</p>
+        <button type="button" class="add"></button>
+        <p class="tag">Non-Fiction</p>
+        </div>
+        </div>
+    <div class="filler"></div>
+    <div class="animated">
+        <img src="https://static.wixstatic.com/media/c4f01e_1227a82e4d7b4b5fbc5195dd38e33af6~mv2.gif" style="width: 100%;" />
+    </div>
+    <div class="filler" id="rec"></div>
+    <div class="title2"><h1>Our Recommendations:</h1></div>
+    <div class="cardContainer2">
+        <div class="card2">
+            <h2>The Psychology of Money</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41r6F2LRf8L._SX323_BO1,204,203,200_.jpg" width="52%" />
+            <p>Bestseller by Morgan Housel<br />In The Psychology of Money, award-winning author Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life’s most important topics.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Non-Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>The Lion, the Witch and the Wardrobe</h2>
+            <img src="https://rukminim1.flixcart.com/image/416/416/book/6/6/7/the-chronicles-of-narnia-the-loin-the-witch-and-the-wardrobe-original-imadf2nsbtg2hfgh.jpeg?q=70" width="55%" />
+            <p>Book by C. S. Lewis<br /> Four kids travel through a wardrobe to the land of Narnia and learn of their destiny to free it with the guidance of a mystical lion.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>The Da Vinci Code</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41yT41SG23L._SX294_BO1,204,203,200_.jpg" width="45%" />
+            <p>The Da Vinci Code is a 2003 mystery thriller novel by Dan Brown. It is Brown's second novel to include the character Robert Langdon: the first was his 2000 novel Angels & Demons. The Da Vinci Code follows "symbologist" Robert Langdon and cryptologist Sophie Neveu.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>Entrepreneurship | 11th Edition</h2>
+            <img src="https://rukminim1.flixcart.com/image/416/416/kbs9k7k0/book/3/0/9/entrepreneurship-11th-edition-original-imaft236gwcvxzuf.jpeg?q=70" width="53%" />
+            <p>By Michael P. Peters, Robert D. Hisrich, Sabyasachi Sinha, Dean A. Shepherd.<br />Entrepreneurship, 11th edition, is a textbook that encourages students and readers to follow a logical manner on the process of formulating, planning, and implementing a new venture.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Non-Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>A Brief History Of Time</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51SWYYvk+KL._SX319_BO1,204,203,200_.jpg" width="57%" />
+            <p>A masterpiece by Stephen Hawkins which begins by reviewing the great theories of the cosmos from Newton to Einstein, before delving into the secrets which still lie at the heart of space and time.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Non-Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>Anne Frank: The Diary of a Young Girl</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51Vps1OxJPL._SX303_BO1,204,203,200_.jpg" width="47%" />
+            <p>Discovered in the attic in which she spent the last years of her life, Anne Frank’s remarkable diary has become a world classic—a powerful reminder of the horrors of war and an eloquent testament to the human spirit.</p>
+           <button type="button" class="add"></button>
+           <p class="tag">Non-Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>The Hitchhiker's Guide to the Galaxy</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61VNUSVgX9L._SX331_BO1,204,203,200_.jpg" width="42%" />
+            <p>Douglas Adams’s mega-selling pop-culture classic sends logic into orbit, plays havoc with both time and physics, offers up pithy commentary on such things as ballpoint pens, potted plants, and digital watches . . . and, most important, reveals the ultimate answer to life, the universe, and everything.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Fiction</p>
+        </div>
+        <div class="card2">
+            <h2>Pride and Prejudice</h2>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41FEoMd5E9L._SX324_BO1,204,203,200_.jpg" width="58%" />
+            <p>In this beautifully written book, Jane Austen shows us the folly of judging by first impressions and superbly evokes the friendships, gossip and snobberies of provincial middle-class life.</p>
+            <button type="button" class="add"></button>
+            <p class="tag">Non-Fiction</p>
+        </div>
+        </div>
+    <div class="filler"></div>
+    <div class="animated">
+        <img src="https://media2.giphy.com/media/1o1r3yH332EA61E1hw/source.gif" style="width: 100%;" />
+    </div>
+    <div class="filler" id="rev"></div>
+    <div class="title2"><h1>Reviews for our store:</h1></div>
+        <div class="cardContainer">
+            <div class="card">
+            <h2>Customer: Pikachu</h2>
+            <img src="https://www.pngmart.com/files/2/Pikachu-Transparent-Background.png" width="120%" />
+            <p>"Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pika Pikachu"</p>
+            </div>
+            <div class="card">
+            <h2>Customer: Jigglypuff</h2><br /><br /><br /><br /><br /><br />
+            <img src="https://s1.stickers.cloud/packs/7b117a9a-c725-415d-9dce-a964327d0476/png/12969cd9-a7be-4da8-a3eb-b30f3025b882.png" width="100%" />
+            <p>"Jigglypuff Jigglypuff Jigglypuff Jigglypuff Jigglypuff"</p>
+            </div>
+            <div class="card">
+            <h2>Customer: Bulbasaur</h2><br /><br /><br /><br /><br />
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f484215b-4e9a-42b5-9feb-77c3dec3a385/d98undu-63fe57ba-9d8e-44cd-9615-5cfb50d9cdd7.png/v1/fill/w_863,h_926,strp/vector__254___bulbasaur_by_dashiesparkle_d98undu-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MDAwIiwicGF0aCI6IlwvZlwvZjQ4NDIxNWItNGU5YS00MmI1LTlmZWItNzdjM2RlYzNhMzg1XC9kOTh1bmR1LTYzZmU1N2JhLTlkOGUtNDRjZC05NjE1LTVjZmI1MGQ5Y2RkNy5wbmciLCJ3aWR0aCI6Ijw9NDY2MSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.e8rOUxw96kJPk2JdEOC2wCY2a8_yKxcc3x2CFPucJm8" width="100%" />
+            <p>"Bulbasaur"</p>
+            </div>
+            <div class="card">
+                <p id="formtext">Please take out some time to leave a review!</p>
+                <form id="form">
+                    <label>Name</label>
+                    <input type="text" placeholder="Your name...">
+                    <label>Email</label>
+                    <input type="email" placeholder="name@example.com">
+                    <label>Your review</label>
+                    <input type="text" width="50%" height="50%" placeholder="Enter your thoughts here">
+                    <center><button type="button" class="submit">Submit</button></center>
+                </form>
+            </div>	
+        </div>
+    
+        <div class="filler"></div>
+        <div class="animated">
+            <img src="https://media2.giphy.com/media/13LKio8046J9e0/giphy.gif?cid=790b7611d4efc3edcef5cb8a20c9b581104c7291963575d5&rid=giphy.gif&ct=g" style="width: 100%;" />
+        </div>
+        <div class="filler" id="foot"></div>
+
+        <div class="title2"><center><p>Some useful links:</p></center></div>
+        <div class="footer">
+            <div>
+                <a href="http://www.patience-is-a-virtue.org/" target="_blank">About Us</a>
+            </div>
+            <div>
+                <a href="http://www.patience-is-a-virtue.org/" target="_blank">Terms and Conditions</a>
+            </div>
+            <div>
+                <a href="http://www.patience-is-a-virtue.org/" target="_blank">Privacy Policy</a>
+            </div>
+            <div>
+                <a href="http://www.patience-is-a-virtue.org/" target="_blank">Copyright Information</a>
+            </div>
+        </div>
+        <div class="title2"><center><p>Links to our social media handles:</p></center></div>
+        <div class="footer">
+            <div>
+                <a href="https://www.facebook.com" target="_blank" style="padding-left: 25vh;"><img src="Images\f.png" width="11%" /></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com" target="_blank"><img src="Images\i.png" width="15%" /></a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com" target="_blank"><img src="Images\l.png" width="15%" /></a>
+            </div>
+            <div>
+                <a href="https://www.twitter.com" target="_blank"><img src="Images\t.png" width="15%" /></a>
+            </div>
+        </div>
+</body>
+</html>
