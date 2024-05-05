@@ -1,6 +1,6 @@
 # Book Haven Bookstore
 
-A simple HTML webpage for Book Haven Bookstore, featuring an introduction, bestsellers, recommendations, reviews, and useful links.
+A [simple HTML webpage](https://unnati026.github.io/book-haven/) for Book Haven Bookstore, featuring an introduction, bestsellers, recommendations, reviews, and useful links.
 
 ## Features:
 - Responsive navigation bar with smooth scrolling.
